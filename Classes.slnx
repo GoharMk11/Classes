@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/Lesson_11_15/">
+    <Project Path="Lesson_11_15/Lesson_11_15_Add_1/Lesson_11_15_Add_1.csproj" Id="f29382d5-1ab2-438d-af1b-83303c8c051c" />
     <Project Path="Lesson_11_15/Lesson_11_15_Ex1/Lesson_11_15_Ex1.csproj" />
     <Project Path="Lesson_11_15/Lesson_11_15_Ex10/Lesson_11_15_Ex10.csproj" Id="0a43f27b-901b-4126-b60e-3add2172381c" />
     <Project Path="Lesson_11_15/Lesson_11_15_Ex11/Lesson_11_15_Ex11.csproj" Id="66480256-fa92-4ef8-9e2e-007545c4a35b" />
