@@ -13,7 +13,7 @@ namespace lesson_2
             if (a == 0)
             {
                 Console.WriteLine("a cannot be 0, the function is not defined.");
-                return; // stop Main here
+                return; 
             }
             Console.WriteLine("Please enter the value for x:");
             string second = Console.ReadLine();
