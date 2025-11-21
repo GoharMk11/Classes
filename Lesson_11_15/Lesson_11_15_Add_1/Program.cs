@@ -20,7 +20,6 @@ namespace lesson_2
             x = Math.Abs(x);
             if (x < 10)
                 return true;
-
             int prev = x%10;
             x = x / 10;
             while (x>0)
