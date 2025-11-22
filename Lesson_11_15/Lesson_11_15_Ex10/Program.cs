@@ -14,25 +14,27 @@ namespace lesson_2
                 Console.WriteLine("Please enter a positive number");
                 return;
             }
-            else if (n<3)
-            {
-                Console.WriteLine("The Fibonacci number for " + n + " is 1");
-                return;
-            }
             int fin_num = fib(n);
             Console.WriteLine("The Fibonacci number for " + n + " is " + fin_num);
 
         }
         static int fib(int n)
         {
-            int prev = 1;
-            int curr = 1;            
-            for (int i=3; i<=n;i++)
+            if (n == 0)
+                return 0;
+            if (n == 1 || n == 2)
+                return 1;
+
+            int prev = 1; 
+            int curr = 1; 
+
+            for (int i = 3; i <= n; i++)
             {
                 int next = prev + curr;
                 prev = curr;
-                curr = next;                
+                curr = next;
             }
+
             return curr;
         }
     }
