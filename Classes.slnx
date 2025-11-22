@@ -14,4 +14,7 @@
     <Project Path="Lesson_11_15/Lesson_11_15_Ex8/Lesson_11_15_Ex8.csproj" Id="feb72f59-cf64-4712-bf56-ef20749190a7" />
     <Project Path="Lesson_11_15/Lesson_11_15_Ex9/Lesson_11_15_Ex9.csproj" Id="fdfd92d9-0b66-4dcb-8b48-4b037983b1db" />
   </Folder>
+  <Folder Name="/Lesson_11_18/">
+    <Project Path="Lesson_11_18/Lesson_11_18_Ex1/Lesson_11_18_Ex1.csproj" Id="795076fe-1e39-4e8b-a42b-212ef5175ea9" />
+  </Folder>
 </Solution>
