@@ -7,8 +7,7 @@ namespace lesson_2
         static void Main()
         {
             Console.WriteLine("Please enter a number");
-            string num = Console.ReadLine();
-            int n = int.Parse(num);
+            int n = int.Parse(Console.ReadLine()); 
             if(n<0)
             {
                 Console.WriteLine("Please enter a positive number");
