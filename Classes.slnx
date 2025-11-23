@@ -23,5 +23,6 @@
   </Folder>
   <Folder Name="/Lesson_11_20/">
     <Project Path="Lesson_11_20/Lesson_11_20_Ex1/Lesson_11_20_Ex1.csproj" Id="cd4fe96f-fbb8-4480-a4ca-87d96890d2f1" />
+    <Project Path="Lesson_11_20/Lesson_11_20_Ex2/Lesson_11_20_Ex2.csproj" Id="7965cf69-938b-4a6d-81a8-efe3679fd457" />
   </Folder>
 </Solution>
