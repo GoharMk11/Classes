@@ -21,7 +21,7 @@ namespace Lesson_3
             {               
                 for (int col = 0; col < n; col++) 
                 {
-                    matrix[row, col] = rdm.Next(1, 100);
+                    matrix[row, col] = rdm.Next(0, 100);
                     Console.Write($"{matrix[row, col]}  ");
                 }
                 Console.WriteLine();
