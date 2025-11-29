@@ -13,16 +13,17 @@ namespace Lesson_3
         {
             Console.WriteLine("Please enter a number");
             int n = int.Parse(Console.ReadLine());
-            string text = BuildPattern(n);
+            string pattern = "ABC";
+            string text = BuildPattern(n,pattern);
             Console.WriteLine(text);
 
         }
-        static string BuildPattern(int n)
+        static string BuildPattern(int n,string pattern)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder(n*pattern.Length);
             for (int i=0;i<n;i++)
             {
-              sb.Append("ABC");
+              sb.Append(pattern);
             }
             return sb.ToString();
 
