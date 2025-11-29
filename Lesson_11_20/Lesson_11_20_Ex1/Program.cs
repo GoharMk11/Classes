@@ -3,6 +3,7 @@
 
 
 using System;
+using System.Text;
 namespace Lesson_3
 {
     class Ex1
@@ -23,27 +24,23 @@ namespace Lesson_3
             {
                 ar[i] = rnd.Next(0, 101);
             }
-            string text = ArrayToString(ar);
-            Console.WriteLine(text);
+            string result = ArrayToString(ar);
+            Console.WriteLine(result);
 
         }
         static string ArrayToString(int[] ar)
         {
-            string result = "";
+
+            if (ar == null || ar.Length == 0)
+                return "";
+            StringBuilder sb = new StringBuilder();
             for (int i=0;i<ar.Length;i++)
             {
-                if (i>0)
-                {
-                    Console.Write(", ");
-                    
-                }
-                Console.Write(ar[i]);
-                if (i == ar.Length - 1)
-                {
-                    Console.Write(":");
-                }
+                if (i > 0) sb.Append(",");
+                sb.Append(ar[i]);
+
             }
-            return result;
+            return sb.ToString();
         }
     }
 }
