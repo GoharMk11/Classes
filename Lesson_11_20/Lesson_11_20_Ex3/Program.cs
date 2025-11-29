@@ -32,10 +32,7 @@ namespace Lesson_3
             Height = height;
         }
 
-        public double GetArea()
-        {
-            return 0.5 * Base * Height;
-        }
+        public double GetArea()=>0.5 * Base * Height;
     }
     class Ex3
     {
