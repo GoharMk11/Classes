@@ -8,17 +8,29 @@ namespace Lesson_3
     
         struct Rectangle
         {
-        public double Width;
-        public double Height;
-        public double GetArea()
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public Rectangle(int width, int height)
         {
-            return Width * Height;
+            if (width <= 0 || height <= 0) throw new ArgumentException("Width/Height must be positive.");
+
+            Width = width;
+            Height = height;
         }
+
+        public int GetArea() => Width * Height;
         }
     struct Triangle
     {
-        public double Base;
-        public double Height;
+        public double Base { get; set; }
+        public double Height { get; set; }
+        public Triangle(double @base, double height)
+        {
+            if (@base <= 0 || height <= 0) throw new ArgumentException("Base/Height must be positive.");
+
+            Base = @base;
+            Height = height;
+        }
 
         public double GetArea()
         {
@@ -31,18 +43,12 @@ namespace Lesson_3
         {
           //For Rectangle
             Console.WriteLine("Please enter the rectangle’s width");
-            double rw = double.Parse(Console.ReadLine());       
+            int rw = int.Parse(Console.ReadLine());       
             Console.WriteLine("Please enter the rectangle’s height");
-            double rh = double.Parse(Console.ReadLine());
-            if (rw<=0 || rh<=0)
-            {
-                Console.WriteLine("Please enter a positive number");
-                return;
-            }
-            Rectangle r;
-            r.Width = rw;
-            r.Height = rh;
-            double rectArea = r.GetArea();
+            int rh = int.Parse(Console.ReadLine());
+
+            Rectangle r = new Rectangle(rw, rh);
+            int rectArea = r.GetArea();
             Console.WriteLine($"The rectangle area is {rectArea}");
 
           //For Triangle
@@ -50,14 +56,8 @@ namespace Lesson_3
             double tb = double.Parse(Console.ReadLine());
             Console.WriteLine("Please enter the triangle’s height");
             double th = double.Parse(Console.ReadLine());
-            if (tb <= 0 || th <= 0)
-            {
-                Console.WriteLine("Please enter a positive number");
-                return;
-            }
-            Triangle t;
-            t.Base = tb;
-            t.Height = th;
+
+            Triangle t= new Triangle(tb, th);
             double triArea = t.GetArea();
             Console.WriteLine($"The triangle area is {triArea}");
         }
