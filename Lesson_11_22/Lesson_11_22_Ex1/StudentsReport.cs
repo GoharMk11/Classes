@@ -15,7 +15,7 @@ namespace StudentApp
                 Console.WriteLine($"{i + 1}) {students[i].Name}: {avg:F2}");
 
             }
-                    }
+        }
         
 
     }
