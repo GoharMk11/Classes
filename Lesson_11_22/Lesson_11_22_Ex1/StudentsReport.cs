@@ -1,6 +1,4 @@
-﻿using StudentsModel;
-using System;
-
+﻿using System;
 
 namespace StudentApp
 {
@@ -11,5 +9,6 @@ namespace StudentApp
             if (students == null || students.Length == 0)
                 throw new ArgumentException("Students can't be empty.", nameof(students));
         }
+
     }
 }
