@@ -22,7 +22,7 @@ namespace Lesson_3
                 for (int col = 0; col < n; col++)
                 {
                     matrix[row, col] = rnd.Next(1, 100);
-                    Console.Write($"{matrix[row, col]} ");
+                    Console.Write($"{matrix[row, col]}\t");
                 }
                 Console.WriteLine();
             }
