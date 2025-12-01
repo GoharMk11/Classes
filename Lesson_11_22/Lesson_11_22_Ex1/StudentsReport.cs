@@ -8,7 +8,6 @@ namespace StudentApp
         {
             if (students == null || students.Length == 0)
                 throw new ArgumentException("Students can't be empty.", nameof(students));
-            Console.WriteLine("-----Students Report-----");
             for (int i=0;i<students.Length;i++)
             {
                 double avg=StudentService.AvgScore(students[i].Scores);
