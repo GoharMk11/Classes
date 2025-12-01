@@ -15,4 +15,9 @@ namespace Lesson_4
     }
 }
 
+//+student
+//+studentInput
+//studentService
+//studentReport
+//Program
 
