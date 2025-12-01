@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StudentsModel
+namespace StudentApp
 {
     struct Student
     {

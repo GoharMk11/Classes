@@ -1,5 +1,5 @@
 ﻿using System;
-namespace StudentInput 
+namespace StudentApp
 {
   public class StudentsInput
     {
