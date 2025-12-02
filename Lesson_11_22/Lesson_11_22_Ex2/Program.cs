@@ -4,3 +4,17 @@
 //այլ նաև հարևանի հարևանների և այդպես շարունակ, քանի դեռ տրված կետում հին արժեք ունեն նաև հարևանները)
 //Անհրաժեշտ է այն լուծել երկու տարբերակով 1. Առանց ռեկուսիա 1. Ռեկուսիա
 
+using System;
+namespace MatrixApp
+{
+    class Ex2
+    {
+        static void Main()
+        {
+            int[,] matrix = MatrixBuilder.CreateMatrix();
+            MatrixPrinter.Print(matrix, "Before:");
+
+
+        }
+    }
+}
