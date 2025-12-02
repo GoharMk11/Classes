@@ -6,7 +6,7 @@ namespace MatrixApp
 {
     public static class ReadInt
     {
-        public static int ReadPositiveInt(string prompt, int min, int max)
+        public static int ReadPositiveInt(string prompt)
         {
             while (true)
             {
