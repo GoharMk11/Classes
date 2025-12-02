@@ -12,6 +12,7 @@ namespace MatrixApp
         static void Main()
         {
             int[,] matrix = MatrixBuilder.CreateMatrix();
+            Console.WriteLine();
             MatrixPrinter.Print(matrix, "Before:");
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
@@ -19,6 +20,7 @@ namespace MatrixApp
             int startY = ReadInt.ReadInRange("Enter startY: ", 0, cols - 1);
             int newValue = ReadInt.ReadPositiveInt("Enter new value: ");
             FloodFill.FillQueue(matrix, startX, startY, newValue);
+            Console.WriteLine();
             MatrixPrinter.Print(matrix, "After:");
         }
     }
