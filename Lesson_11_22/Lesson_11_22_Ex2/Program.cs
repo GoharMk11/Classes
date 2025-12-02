@@ -13,8 +13,12 @@ namespace MatrixApp
         {
             int[,] matrix = MatrixBuilder.CreateMatrix();
             MatrixPrinter.Print(matrix, "Before:");
-
-
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+            int startX = ReadInt.ReadInRange("Enter startX: ", 0, rows - 1);
+            int startY = ReadInt.ReadInRange("Enter startY: ", 0, cols - 1);
+            FloodFill.FillQueue(matrix, startX, startY, newValue);
+            MatrixPrinter.Print(matrix, "After:");
         }
     }
 }
