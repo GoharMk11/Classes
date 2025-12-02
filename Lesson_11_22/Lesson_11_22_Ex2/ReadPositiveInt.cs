@@ -2,7 +2,7 @@
 
 namespace MatrixApp
 {
-    public class ReadInt
+    public static class ReadInt
     {
         public static int ReadPositiveInt(string prompt)
         {

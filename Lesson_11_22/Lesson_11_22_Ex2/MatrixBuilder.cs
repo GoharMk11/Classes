@@ -1,18 +1,4 @@
 ﻿using System;
-using System.Diagnostics.Metrics;
-using System.Threading.Tasks;
-
-/*
-
-Ask: “Enter number of rows (n):”
-
-Ask: “Enter number of columns (m):”
-
-Validate:
-
-if user types not-a - number → ask again
-
-if n <= 0 or m <= 0 → ask again*/
 
 namespace MatrixApp
 {
@@ -20,13 +6,19 @@ namespace MatrixApp
     {
         public static int[,] CreateMatrix()
         {
-            Console.WriteLine("Enter number of rows (n)");
-
-            if (!int.TryParse(Console.ReadLine(), out int n)
+            int n=ReadInt.ReadPositiveInt("Enter number of rows (n): ");
+            int m=ReadInt.ReadPositiveInt("Enter number of columns (m): ");
+            int[,] matrix = new int[n, m];
+            Random rnd = new Random();
+            for (int i=0;i<n;i++)
+            {
+                for (int j=0;j<m;j++)
                 {
-                    Console.WriteLine("Plese enter a number!")
+                    matrix[i,j]= rnd.Next(0, 10);
                 }
-            Console.WriteLine("Enter number of columns (m)");
+            }
+
+            return matrix;
         }
     }
 }
