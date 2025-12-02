@@ -32,5 +32,8 @@
     <Project Path="Lesson_11_22/Lesson_11_22_Ex2/Lesson_11_22_Ex2.csproj" Id="39bff2dc-4556-4242-92d4-48effd934293" />
     <Project Path="Lesson_11_22/Lesson_11_22_Ex2_v2/Lesson_11_22_Ex2_v2.csproj" Id="6401d362-9140-4362-8a85-52e2770b868c" />
   </Folder>
-  <Folder Name="/Lesson_11_25/" />
+  <Folder Name="/Lesson_11_25/">
+    <Project Path="Lesson_11_25/Lesson_11_25_Ex1/Lesson_11_25_Ex1.csproj" Id="5d841012-228a-4e4f-8582-7eb7f7cb5dcc" />
+    <Project Path="Lesson_11_25/Lesson_11_25_Ex2/Lesson_11_25_Ex2.csproj" Id="5ee23cfa-16b1-4fd2-a437-ae87f6c4156b" />
+  </Folder>
 </Solution>
