@@ -1,53 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace MyProgram
+public class BracketsAlt
 {
-    class Ex1
+    public static bool IsValid(string s)
     {
-        public static bool IsValid(string s)
+        if (s == null) throw new ArgumentNullException(nameof(s));
+
+        char[] buffer = new char[s.Length];
+        int top = -1;
+
+        foreach (char c in s)
         {
-            if (s == null) throw new ArgumentNullException(nameof(s));
-
-            Stack<char> stack = new Stack<char>();
-
-            foreach (char c in s)
+            if (c == '(' || c == '{' || c == '[')
             {
-                if (c == '(' || c == '{' || c == '[')
-                {
-                    stack.Push(c);
-                    continue;
-                }
-
-                if (c == ')' || c == '}' || c == ']')
-                {
-                    if (stack.Count == 0) return false;
-
-                    char top = stack.Peek();
-
-                    bool matches =
-                        (c == ')' && top == '(') ||
-                        (c == '}' && top == '{') ||
-                        (c == ']' && top == '[');
-
-                    if (!matches) return false;
-
-                    stack.Pop();
-                    continue;
-                }
-
-                return false; 
+                buffer[++top] = c;
             }
+            else if (c == ')' || c == '}' || c == ']')
+            {
+                if (top < 0) return false;
 
-            return stack.Count == 0;
-        }
+                char open = buffer[top--];
 
-        public static void Main()
-        {
-            string[] tests = { "()", "([])", "([)]", "{[()()]}", "(((", "({[()()]})" };
+                bool matches =
+                    (c == ')' && open == '(') ||
+                    (c == '}' && open == '{') ||
+                    (c == ']' && open == '[');
 
-            foreach (var t in tests)
-                Console.WriteLine($"{t} -> {IsValid(t)}");
-        }
+                if (!matches) return false;
+            }
+            else
+            {
+                return false;
+            }
+        } // <-- closes foreach
+
+        return top == -1; // <-- after the loop
+    }
+
+    public static void Main()
+    {
+        string[] tests = { "()", "([])", "([)]", "{[()()]}", "(((", "({[()()]})" };
+
+        foreach (var t in tests)
+            Console.WriteLine($"{t} -> {IsValid(t)}");
     }
 }
